@@ -1,0 +1,1192 @@
+/* ===== USER PANEL ===== */
+.user-panel .sidebar {
+    width: 350px;
+}
+
+.user-panel .sidebar.collapsed {
+    width: 75px;
+}
+
+.user-panel .sidebar .text {
+    font-size: 15px;
+}
+
+.menu{
+    margin-top: -200px;
+    transform: translateY;
+}
+/* LOCKED ITEMS */
+.user-panel .locked {
+    opacity: 0.4;
+    pointer-events: auto;
+    position: relative;
+}
+
+.user-panel .locked::after {
+    content: "🔒";
+    position: absolute;
+    right: 15px;
+}
+
+/* ===== ADMIN PANEL ===== */
+.admin-panel .sidebar {
+    width: 300px;
+}
+
+.admin-panel .sidebar.collapsed {
+    width: 80px;
+}
+
+.admin-panel .locked {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+.profile-warning {
+    background: #111;
+    border: 1px solid #333;
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 520px;
+    margin: 80px auto;
+}
+
+
+.profile-warning h2 {
+    color: #ff9800;
+    margin-bottom: 10px;
+}
+
+.profile-warning p {
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.profile-warning button {
+    padding: 12px 26px;
+    border: none;
+    border-radius: 6px;
+    background: #ff9800;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.user-panel .locked {
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+/* ===== PROFILE PANNEL ==================================================== */
+
+/* =========================
+   PROFILE PAGE WRAPPER
+========================= */
+
+.profile-wrapper {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 25px;
+}
+
+/* =========================
+   LEFT PROFILE CARD
+========================= */
+
+.profile-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+.profile-photo-wrapper {
+    position: relative;
+    display: inline-block;
+    margin-top: -150px;
+}
+
+.profile-name {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.profile-role {
+    font-size: 14px;
+    opacity: 0.7;
+    margin-bottom: 15px;
+}
+
+.btn-pro {
+    padding: 10px 18px;
+    background: linear-gradient(135deg, #2AD7FF, #00ff88);
+    border: none;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.logo {
+	font-family: "Science Gothic";
+	font-weight: bolder;
+	font-size: 20px;
+}  
+
+/* =========================
+   RIGHT SECTION
+========================= */
+
+.profile-right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* =========================
+   INFO ROW (2 CARDS)
+========================= */
+
+.info-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* =========================
+   COMMON CARD STYLES
+========================= */
+
+.card-box {
+    background: #0e0e0e;
+    border-radius: 14px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+.box-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #2AD7FF;
+}
+
+/* =========================
+   INFO LIST
+========================= */
+
+.info-list p {
+    margin: 10px 0;
+    font-size: 14.5px;
+    opacity: 0.85;
+}
+
+.info-list span {
+    font-weight: 600;
+    color: #2AD7FF;
+    margin-right: 5px;
+}
+
+.info-list .InActive {
+    color: #ffb300 !important;
+}
+
+.info-list .Active {
+    color: rgb(0, 255, 0) !important;
+}
+
+.info-row{
+    gap: 10px;
+    margin-right: -80px;
+    margin-left: -30px;
+}
+/* =========================
+   EDIT PROFILE SECTION
+========================= */
+
+.edit-box {
+    flex-shrink: 0;
+    margin-right: -80px;
+    margin-left: -30px;
+}
+
+.edit-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    align-items: center;
+}
+
+.edit-grid input,
+.edit-grid select {
+    padding: 10px 12px;
+    background: #080808;
+    border: 1px solid #2AD7FF;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.edit-grid input::placeholder {
+    color: #888;
+}
+
+.save-btn {
+    padding: 10px;
+    background: #00ff88;
+    color: #000;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+}
+
+/* =========================
+   PROFILE IMAGE CAMERA BTN
+========================= */
+
+.camera-btn {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    width: 34px;
+    height: 34px;
+    background: #2AD7FF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.25s ease;
+    box-shadow: 0 0 8px rgba(42, 215, 255, 0.6);
+}
+
+.camera-btn i {
+    color: #000;
+    font-size: 18px;
+}
+
+.camera-btn:hover {
+    transform: scale(1.1);
+    background: #00ff88;
+}
+
+.camera-btn::after {
+    content: "Change photo";
+    position: absolute;
+    bottom: 45px;
+    background: #000;
+    color: #2AD7FF;
+    padding: 4px 8px;
+    font-size: 11px;
+    border-radius: 6px;
+    opacity: 0;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+.camera-btn:hover::after {
+    opacity: 1;
+}
+
+
+/* =========================
+   TOAST STYLES*/
+
+   .toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 14px 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    opacity: 0;
+    pointer-events: auto;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 9999;
+}
+
+.toast.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.error-toast {
+    background: #dc2626;   
+    color: #ffffff;
+}
+
+/* BOOK APPOINTMENT PAGE CSS ==================================================================================*/
+    /* =========================
+    BOOK APPOINTMENT WRAPPER
+    ========================= */
+
+    .appoint-wrapper {
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    /* =========================
+    CARD GRID
+    ========================= */
+
+    .appoint-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+        margin-bottom: 30px;
+    }
+
+    /* =========================
+    APPOINTMENT CARD
+    ========================= */
+
+    .appoint-card {
+    background: #0e0e0e;
+    border-radius: 12px;        
+    padding: 14px 16px;       
+    text-align: center;
+    box-shadow: 0 0 12px rgba(42, 215, 255, 0.12);
+    border: 1px solid rgba(42, 215, 255, 0.3);
+    transition: 0.3s ease;
+}
+
+
+    .appoint-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 0 25px rgba(42, 215, 255, 0.4);
+    }
+
+    /* =========================
+    ICON
+    ========================= */
+
+    .appoint-card .icon {
+        font-size: 36px;
+        color: #2AD7FF;
+        margin-bottom: 12px;
+    }
+
+    /* =========================
+    LABEL
+    ========================= */
+
+    .box-label {
+    display: block;
+    font-size: 16px;         
+    font-weight: 600;        
+    letter-spacing: 0.4px;   
+    margin-bottom: 6px;      
+    color: #ffffff;
+    text-transform: capitalize;
+    text-shadow: 0 0 6px rgba(42, 215, 255, 0.25);
+}
+
+
+    /* =========================
+    INPUTS
+    ========================= */
+
+    .appoint-card select,
+    .appoint-card input {
+        width: 100%;
+        padding: 12px;
+        border-radius: 10px;
+        background: #080808;
+        border: 1px solid #2AD7FF;
+        color: #78b5bc;
+        font-size: 14px;
+    }
+
+    .appoint-card select:focus,
+    .appoint-card input:focus {
+        outline: none;
+        box-shadow: 0 0 10px rgba(42, 215, 255, 0.4);
+    }
+
+    /* =========================
+    ACTION BUTTON
+    ========================= */
+
+    .appoint-action {
+        display: flex;
+        justify-content: center;
+    }
+
+    .appoint-btn {
+        padding: 10px 20px;
+        border-radius: 30px;
+        border: none;
+        font-size: 14px;
+        font-weight: 700;
+        cursor: pointer;
+        background: linear-gradient(135deg, #2AD7FF, #00ff88);
+        color: #000;
+        box-shadow: 0 0 20px rgba(0, 255, 136, 0.4);
+        transition: 0.3s ease;
+    }
+
+    .appoint-btn:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 30px rgba(0, 255, 136, 0.7);
+    }
+
+    .appoint-card .icon {
+        color: #fff;
+    }
+    .appoint-card .bx-calendar {
+        color: #fff;
+    }
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+/* MY APPOINTMENTS PAGE CSS ==================================================================================*/
+/* =========================
+   MY APPOINTMENTS PAGE
+========================= */
+
+.my-appoint-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.my-appoint-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* =========================
+   APPOINTMENT CARD
+========================= */
+
+.my-appoint-card {
+    background: #0e0e0e;
+    border-radius: 16px;
+    padding: 22px;
+    border: 1px solid rgba(42, 215, 255, 0.35);
+    box-shadow: 0 0 18px rgba(42, 215, 255, 0.15);
+    transition: 0.3s ease;
+}
+
+.my-appoint-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 28px rgba(42, 215, 255, 0.45);
+}
+
+/* =========================
+   CARD TOP
+========================= */
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.service {
+    font-size: 17px;
+    font-weight: 600;
+    color: #2AD7FF;
+}
+
+/* =========================
+   STATUS BADGES
+========================= */
+
+.status {
+    padding: 6px 14px;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+.status.pending {
+    background: rgba(255, 179, 0, 0.15);
+    color: #ffb300;
+}
+
+.status.confirmed {
+    background: rgba(0, 255, 136, 0.15);
+    color: #00ff88;
+}
+
+.status.cancelled {
+    background: rgba(255, 75, 75, 0.15);
+    color: #ff4b4b;
+}
+.status.completed {
+    background: rgba(75, 210, 255, 0.15);
+    color: #00f2ff;
+}
+/* =========================
+   CARD INFO
+========================= */
+
+.card-info p {
+    margin: 8px 0;
+    font-size: 14px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.card-info i {
+    color: #2AD7FF;
+    font-size: 18px;
+}
+
+
+/* USER DASHBOARD PAGE CSS ==================================================================================*/
+
+/* =========================
+   USER DASHBOARD
+========================= */
+
+.user-dash-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* =========================
+   STATS ROW
+========================= */
+
+.user-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.stat-card {
+    background: #0e0e0e;
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid rgba(42, 215, 255, 0.35);
+    box-shadow: 0 0 15px rgba(42, 215, 255, 0.15);
+    transition: 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 28px rgba(42, 215, 255, 0.4);
+}
+
+.stat-card i {
+    font-size: 34px;
+    color: #2AD7FF;
+}
+
+.stat-label {
+    font-size: 13px;
+    opacity: 0.7;
+}
+
+.stat-value {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.stat-value.active {
+    color: #00ff88;
+}
+
+/* =========================
+   MAIN SECTION
+========================= */
+
+.user-dash-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+/* =========================
+   NEXT APPOINTMENT
+========================= */
+
+.next-info p {
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.next-info i {
+    color: #2AD7FF;
+}
+
+/* =========================
+   QUICK ACTIONS
+========================= */
+
+.action-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.quick-btn {
+    width: 150px;
+    padding: 14px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #2AD7FF, #00ff88);
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+    color: #000;
+    transition: 0.3s ease;
+}
+
+.quick-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+}
+
+/* SETTINGS PAGE CSS ==================================================================================*/
+/* =====================
+   MINI SETTINGS LAYOUT
+===================== */
+
+.settings-mini {
+    max-width: 720px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+/* =====================
+   MINI CARD
+===================== */
+
+.mini-card {
+    padding: 22px;
+    border-radius: 14px;
+    background: #0e0e0e;
+}
+
+/* =====================
+   INPUTS
+===================== */
+
+.mini-card input,
+.mini-card select {
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 11px 14px;
+    border-radius: 10px;
+    background: #080808;
+    border: 1px solid rgba(42, 215, 255, 0.4);
+    color: #fff;
+    font-size: 14px;
+}
+
+/* =====================
+   BUTTONS
+===================== */
+
+.mini-btn {
+    width: 100%;
+    padding: 11px;
+    border-radius: 22px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s ease;
+}
+
+.mini-btn.primary {
+    background: linear-gradient(135deg, #2AD7FF, #00ff88);
+    color: #000;
+}
+
+.mini-btn.danger {
+    background: #ff3b3b;
+    color: #fff;
+}
+
+.mini-btn:hover {
+    transform: scale(1.04);
+}
+
+/* =====================
+   SELECT ROW
+===================== */
+
+.select-row label {
+    font-size: 13px;
+    margin-bottom: 6px;
+    display: block;
+    color: #aaa;
+}
+
+.dt-wrap {
+    display: flex;
+    flex-direction: column; 
+    gap: 15px;              
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* SLOTS MANAGEMENT PAGE CSS ==================================================================================*/
+
+/* =========================
+   FORM LAYOUT
+========================= */
+/* =========================
+   FORM LAYOUT
+========================= */
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 13px;
+    color: #9fefff;
+}
+
+/* INPUTS */
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 12px;
+    border: 1px solid rgba(42, 215, 255, 0.4);
+    background: #0b1418;
+    color: #ffffff;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #2AD7FF;
+    box-shadow: 0 0 0 2px rgba(42, 215, 255, 0.15);
+}
+
+textarea {
+    resize: none;
+    min-height: 80px;
+}
+
+/* =========================
+   TIME SLOT INPUTS
+========================= */
+.slot-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.slot-inputs input[type="time"] {
+    appearance: none;
+    -webkit-appearance: none;
+    background: #0b1418;
+    border: 1px solid rgba(42, 215, 255, 0.4);
+    border-radius: 12px;
+    padding: 12px 14px;
+    color: #ffffff;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* CLOCK ICON COLOR */
+.slot-inputs input[type="time"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+/* =========================
+   SAVE BUTTON
+========================= */
+.save-btn {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 24px;
+    border: none;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #00f2ff, #00ff9d);
+    color: #001;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.save-btn:hover {
+    transform: translateY(-1px);
+    opacity: 0.9;
+}
+
+
+/* MANAGE SLOTS  STYLES */
+
+
+/* =========================
+   SLOT MODAL WRAPPER
+========================= */
+.slot-wrapper {
+    padding: 20px;
+    max-width: 420px;
+}
+
+/* TITLE */
+.slot-wrapper h3 {
+    margin-bottom: 18px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #2AD7FF;
+}
+
+/* =========================
+   ADD SLOT FORM
+========================= */
+.slot-wrapper #slotForm {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.slot-wrapper #slotForm input[type="time"] {
+    flex: 1;
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1px solid #2AD7FF;
+    background: #080808;
+    color: #fff;
+    outline: none;
+}
+
+.slot-wrapper #slotForm button {
+    padding: 10px 22px;
+    border-radius: 22px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    background: linear-gradient(135deg, #2AD7FF, #00ff88);
+    color: #000;
+
+    /* IMPORTANT RESET */
+    position: static;
+    transform: none;
+}
+
+/* =========================
+   SLOT LIST
+========================= */
+.slot-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* SLOT CARD */
+.slot-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #111;
+    padding: 12px 16px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* TIME */
+.slot-time {
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+}
+
+/* =========================
+   ACTION BUTTONS
+========================= */
+.slot-actions {
+    display: flex;
+    gap: 8px;
+}
+
+/* RESET GLOBAL BUTTON EFFECTS */
+.slot-actions button {
+    all: unset;
+    padding: 6px 14px;
+    border-radius: 14px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* TOGGLE */
+.slot-actions .toggle-btn {
+    background: #2AD7FF;
+    color: #000;
+}
+
+.slot-actions .toggle-btn.disabled {
+    background: #ff9f43;
+    color: #000;
+}
+
+/* DELETE */
+.slot-actions .delete-btn {
+    background: #ff4d4d;
+    color: #fff;
+}
+
+/* HOVER */
+.slot-actions button:hover {
+    opacity: 0.85;
+}
+
+/* =========================
+   TIME INPUT – CLEAN & FIXED
+========================= */
+
+#slotForm input[type="time"] {
+    flex: 1;
+    height: 44px;
+    padding: 0 14px;
+    border-radius: 12px;
+    border: 1px solid #2AD7FF;
+    background-color: #0b0b0b;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Remove weird browser outlines */
+#slotForm input[type="time"]:focus {
+    box-shadow: 0 0 0 2px rgba(42, 215, 255, 0.35);
+}
+
+/* Chrome / Edge – AM PM & time text */
+#slotForm input[type="time"]::-webkit-datetime-edit {
+    color: #ffffff;
+    padding: 0;
+}
+
+/* HH:MM */
+#slotForm input[type="time"]::-webkit-datetime-edit-hour-field,
+#slotForm input[type="time"]::-webkit-datetime-edit-minute-field {
+    color: #ffffff;
+}
+
+/* AM / PM */
+#slotForm input[type="time"]::-webkit-datetime-edit-ampm-field {
+    color: #2AD7FF;
+    font-weight: 700;
+}
+
+/* Calendar / Clock Icon */
+#slotForm input[type="time"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+/* =========================
+   TIME SELECT (HH MM AM/PM)
+========================= */
+
+#slotForm select {
+    height: 44px;
+    padding: 0 14px;
+    border-radius: 12px;
+    border: 1px solid #2AD7FF;
+    background: #0b0b0b;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    outline: none;
+    cursor: pointer;
+    appearance: none;          
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+/* spacing consistency */
+#slotForm {
+    align-items: center;
+}
+
+/* dropdown arrow using CSS */
+#slotForm select {
+    background-image: 
+        linear-gradient(45deg, transparent 50%, #2AD7FF 50%),
+        linear-gradient(135deg, #2AD7FF 50%, transparent 50%);
+    background-position:
+        calc(100% - 18px) 18px,
+        calc(100% - 13px) 18px;
+    background-size: 5px 5px;
+    background-repeat: no-repeat;
+}
+
+/* focus effect */
+#slotForm select:focus {
+    box-shadow: 0 0 0 2px rgba(42, 215, 255, 0.35);
+}
+
+/* =========================
+   ADD SLOT BUTTON FIX
+========================= */
+
+#slotForm button {
+    height: 44px;
+    padding: 0 22px;
+    border-radius: 22px;
+    border: none;
+    font-weight: 700;
+    background: linear-gradient(135deg, #2AD7FF, #00ff88);
+    color: #000;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+/* =========================
+   SLOT ITEM – NO FLOATING BUGS
+========================= */
+
+.slot-item {
+    position: relative;
+}
+
+.slot-actions button {
+    all: unset;
+    padding: 6px 14px;
+    border-radius: 14px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* Toggle */
+/* =========================
+   TIME SELECT – CLEAN (NO TOGGLE)
+========================= */
+
+#slotForm select {
+    height: 44px;
+    padding: 0 14px;
+    border-radius: 12px;
+    border: 1px solid #2AD7FF;
+    background-color: #0b0b0b;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    outline: none;
+    cursor: pointer;
+    appearance: auto;
+    -webkit-appearance: menulist;
+    -moz-appearance: menulist;
+
+    background-image: none; 
+}
+
+/* focus effect */
+#slotForm select:focus {
+    box-shadow: 0 0 0 2px rgba(42, 215, 255, 0.35);
+}
+
+.toggle-btn.disabled {
+    background: #ff9f43;
+}
+
+/* Delete */
+.delete-btn {
+    background: #ff4d4d;
+    color: #fff;
+}
+
+/* ===== MODERN SELECT DROPDOWN ===== */
+.modal-form select {
+    width: 100%;
+    height: 44px;
+    padding: 0 42px 0 14px;
+    border-radius: 14px;
+    border: 1px solid rgba(0, 255, 208, 0.7);
+    background: linear-gradient(145deg, #0b0f14, #05070a);
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+    transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover */
+.modal-form select:hover {
+    border-color: #00ffd0;
+}
+
+/* Focus glow */
+.modal-form select:focus {
+    border-color: #00ffd0;
+    box-shadow: 0 0 0 2px rgba(0, 255, 208, 0.25);
+}
+
+/* Disabled option color */
+.modal-form select option {
+    background: #05070a;
+    color: #ffffff;
+}
+
+/* ===== CUSTOM DROPDOWN ARROW ===== */
+.form-group {
+    position: relative;
+}
+
+.form-group::after {
+    position: absolute;
+    right: 14px;
+    top: 52%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: #00ffd0;
+    pointer-events: none;
+}
+
+.service-desc {
+    font-size: 13px;
+    color: #9aa0a6;
+    margin-top: 6px;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
